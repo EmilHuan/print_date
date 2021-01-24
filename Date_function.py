@@ -32,7 +32,7 @@ def print_date(month, week_number, Feb_leap_or_not = 28):
                     print()
                 # 9~31 號印出時，日期前面不加 0
                 for i in range(9, 31):
-                    print("{}/0{}/{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/0{}/{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
 
             # 如 month == 10, 12 月，印出時月份前不加 0，共要印出 31 天份的日期
@@ -43,29 +43,29 @@ def print_date(month, week_number, Feb_leap_or_not = 28):
                     print()
                 # 9~31 號印出時，日期前面不加 0
                 for i in range(9, 31):
-                    print("{}/{}/{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/{}/{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
 
             # 如 month == 4, 6, 9 月，印出時月份前加 0，共要印出 30 天份的日期
             elif month in (4, 6, 9):
                 # 1~ 9 號印出時，日期前面加 0
                 for i in range(9):
-                    print("{}/0{}/0{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/0{}/0{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
                 # 9~31 號印出時，日期前面不加 0
                 for i in range(9, 30):
-                    print("{}/0{}/{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/0{}/{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
 
             # 如 month == 11 月，印出時月份前不加 0，共要印出 30 天份的日期
             elif month == 11:
                 # 1~ 9 號印出時，日期前面加 0
                 for i in range(9):
-                    print("{}/{}/0{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/{}/0{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
                 # 9~31 號印出時，日期前面不加 0
                 for i in range(9, 30):
-                    print("{}/{}/{} ({})：".format(year, month, i+1, week[i + (week_number - 1)]))
+                    print("{}/{}/{} ({})：".format(year, month, i + 1, week[i + (week_number - 1)]))
                     print()
 
             # 如 month == 2 月，則使用 Feb_leap_or_not 引數作為印出日期數 (這邊預設 28 天，平年)
