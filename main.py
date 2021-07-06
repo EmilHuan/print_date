@@ -7,7 +7,6 @@ while True:
     try:
         # while True 檢查的主程式，請使用者輸入月份、星期幾、日期間要空幾行
         month = eval(input("請輸入月份 (1~12)："))
-        week_number = eval(input("請輸入當月一號星期數字 (1~7):"))
         # blank_number_chr 先不轉換成數字，且去掉左右兩側空格
         blank_number_chr = (input("請輸入每個日期間的空行數 (不輸入則使用預設值空一行)：")).strip()
 
@@ -29,11 +28,8 @@ while True:
 
     # 如例外檢查通過，執行 Date_function.py 檔案裡的函數 print_date
     else:
-        Date_function.print_date(month, week_number, blank_number)
+        Date_function.print_date(month, blank_number)
         # 函數執行完畢後顯示感謝使用者的話
         print("感謝您的使用！")
-        # 終止 while True
+        # 終止 while True 
         break
-
-
-
