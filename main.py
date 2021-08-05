@@ -29,7 +29,16 @@ while True:
     # 如例外檢查通過，執行 Date_function.py 檔案裡的函數 print_date
     else:
         Date_function.print_date(month, blank_number)
-        # 函數執行完畢後顯示感謝使用者的話
-        print("感謝您的使用！")
-        # 終止 while True 
-        break
+        print()
+        # 詢問使用者是否要繼續列印其它月份
+        next_print = input("要再列印其它月份嗎？(繼續列印請輸入 y，結束列印請按任意鍵)：")
+        if next_print.lower() == "y":
+            pass
+        else:
+            # 函數執行完畢後顯示感謝使用者的話
+            print("感謝您的使用！")
+            # 終止 while True (結束列印)
+            break
+
+
+
