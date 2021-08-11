@@ -40,5 +40,6 @@ while True:
             # 終止 while True (結束列印)
             break
 
-
-
+            
+  
+  
