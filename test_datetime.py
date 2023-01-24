@@ -1,5 +1,14 @@
 import datetime
 
+test = datetime.datetime.now()
+print(test)
+
+string_test = datetime.datetime.now().strftime("%Y.%m.%d_%H.%M.%S")
+print(string_test)
+
+
+print()
+print()
 # 印出系統年份
 year = datetime.date.today().year
 print(year)

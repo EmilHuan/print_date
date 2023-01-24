@@ -108,7 +108,7 @@ def print_date(month, blank_number = 1):
 # Date_function.py 測試程式
 if __name__ == "__main__":
     # 測試預設情況 (空格參數 = 0，日期間不空格)
-    print_date(1 , 0)
+    print_date(1, 0)
     # 分隔線
     print("---------------------")
     # 測試 2 月自動判斷閏年印出情況 (空格參數使用預設值，省略)

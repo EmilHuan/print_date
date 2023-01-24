@@ -1,5 +1,6 @@
 # 匯入 Date_function.py
 import Date_function
+# new computer git test
 
 # 主程式用 while True 包覆，出現例外 (Exception) 時可重新讓使用者輸入
 while True:
