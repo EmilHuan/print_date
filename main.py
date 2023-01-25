@@ -3,21 +3,36 @@
 import Date_function
 # new computer git test
 
+# 計算執行次數
+count = 0
+
 # 主程式用 while True 包覆，出現例外 (Exception) 時可重新讓使用者輸入
 while True:
     # 例外處理
     try:
-        # while True 檢查的主程式，請使用者輸入月份、星期幾、日期間要空幾行
-        month = eval(input("請輸入月份 (1~12)："))
-        # blank_number_chr 先不轉換成數字，且去掉左右兩側空格
-        blank_number_chr = (input("請輸入每個日期間的空行數 (不輸入則使用預設值空一行)：")).strip()
-
-        # 如輸入 blank_number_chr 時直接按 Enter，則 blank_number == 1 (預設空一行)
-        if blank_number_chr == "":
+        # 每次執行後 +1
+        count += 1
+        
+        # 如為第一次執行，則直接帶入當前月份 & 空一行
+        if count == 1:
+            month = Date_function.now_month()
             blank_number = 1
-        # 如有輸入，則轉換為數字並當作 blank_number 的變數值 (自訂空幾行)
+        # 第二次開始，皆詢問月份 & 空行數 (while true 最多循環 100 次)
+        elif count <= 100:
+            # while True 檢查的主程式，請使用者輸入月份、星期幾、日期間要空幾行
+            month = eval(input("請輸入月份 (1~12)："))
+            # blank_number_chr 先不轉換成數字，且去掉左右兩側空格
+            blank_number_chr = (input("請輸入每個日期間的空行數 (不輸入則使用預設值空一行)：")).strip()
+
+            # 如輸入 blank_number_chr 時直接按 Enter，則 blank_number == 1 (預設空一行)
+            if blank_number_chr == "":
+                blank_number = 1
+            # 如有輸入，則轉換為數字並當作 blank_number 的變數值 (自訂空幾行)
+            else:
+                blank_number = eval(blank_number_chr)
+        # 避免 while true 無限循環，count > 100 後中止程式
         else:
-            blank_number = eval(blank_number_chr)
+            break
 
     # SyntaxError 例外，輸入值出現特殊字元時回傳錯誤訊息
     except SyntaxError:
@@ -39,6 +54,7 @@ while True:
         next_print = input("要再列印其它月份嗎？(繼續列印請輸入 y，結束列印請按任意鍵)：")
         if next_print.lower() == "y":
             pass
+            print(count)
         else:
             # 函數執行完畢後顯示感謝使用者的話
             print("感謝您的使用！")
@@ -46,5 +62,3 @@ while True:
             break
 
             
-  
-  

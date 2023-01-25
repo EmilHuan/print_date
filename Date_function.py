@@ -7,6 +7,14 @@ import datetime
 year = datetime.date.today().year
 
 
+### 回傳當前月份 fiunction
+def now_month():
+    # 讀取系統時間中的月份
+    month_int = datetime.date.today().month
+    # 回傳月份值 (整數型態)
+    return month_int
+
+
 ### 印出空格 function (可自訂要空幾格)
 def blank_rows(number):
     number += 1
