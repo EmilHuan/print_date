@@ -1,3 +1,4 @@
+### 印出近三個月日期
 # 匯入 Date_function.py
 import Date_function
 # new computer git test
@@ -29,7 +30,10 @@ while True:
 
     # 如例外檢查通過，執行 Date_function.py 檔案裡的函數 print_date
     else:
-        Date_function.print_date(month, blank_number)
+        # 一次印出一季 (三個月) 的日期
+        for i in range(3):
+            Date_function.print_date(month + i, blank_number)
+        
         print()
         # 詢問使用者是否要繼續列印其它月份
         next_print = input("要再列印其它月份嗎？(繼續列印請輸入 y，結束列印請按任意鍵)：")
